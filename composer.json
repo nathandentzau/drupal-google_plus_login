@@ -10,7 +10,8 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "league/oauth2-google": "^2.0"
+        "league/oauth2-google": "^2.0",
+        "drupal/externalauth": "^1.0"
     },
     "type": "drupal-module",
     "minimum-stability": "dev"
