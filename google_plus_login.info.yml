@@ -1,0 +1,8 @@
+name: Google+ Login
+description: Authentication with Google+ as an OAuth 2.0 service provider.
+type: module
+core: 8.x
+package: Authentication
+
+dependencies:
+  - externalauth
