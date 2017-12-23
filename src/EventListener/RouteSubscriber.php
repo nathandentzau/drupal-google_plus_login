@@ -32,12 +32,11 @@ class RouteSubscriber extends RouteSubscriberBase {
       return; // bail, only alter the route if this option is true.
     }
 
+    $loginRoute = clone $collection->get('user.login');
+    $loginRoute->setPath('/user/site-login');
+
     // Register the new Drupal login route.
-    $collection->add(
-      'user.drupal_login',
-      (clone $collection->get('user.login'))
-        ->setPath('/user/site-login')
-    );
+    $collection->add('user.drupal_login', $loginRoute);
 
     // Alter the route /user/login to return the Google OAuth controller.
     $collection
